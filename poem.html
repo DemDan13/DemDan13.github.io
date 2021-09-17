@@ -4,18 +4,125 @@
         <title>Défis: Écrits un poème</title>
         <meta charset="utf-8">
     </head>
+    <style>
+        /* Fait que le font est le meme partout */
+        #programe {
+            font-family: "Times New Roman", serif;
+        }
+        /* Modifie l'affichage du code de le grand titre*/
+        #main {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80%;
+            background: aquamarine;
+            text-align: center;
+            color: black; 
+
+        }
+        /* Mis en forme de la bar gauche */
+        #bar-gauche {
+            background-color: bisque;
+            position: fixed;
+            top: 10%;
+            left: 0;
+            width: 20%;
+            height: 59%;
+            border: 5px solid black;
+            margin: 0px;
+            font-size: medium;
+            font-weight: lighter;
+        }
+        /* Mis en forme du grand titre en haut */
+        .titre {
+            font-size: 150%;
+            font-weight: bold;
+            background: aliceblue;
+            position: fixed;
+            text-align: center;
+            left: 0;
+            top: 0;
+            border: 5px solid black;
+            width:20%;
+            height: 10%;
+            margin: auto;
+        }
+        /* Mis en forme des informations en coin d'ecran */
+        #autres-informations {
+            position: fixed;
+            border: 5px solid black;
+            height: 30%;
+            width:20%;
+            left: 0;
+            top: 70%;
+        }
+        /* Mis en forme de la bibliographie sur moi */
+        #bibliographie {
+            position: absolute;
+            left: 19%;
+            top: 10%;
+        }
+        /* Mis en forme de la table de connaissences */
+        table, th, td {
+            border: 1px solid black;
+        }
+        /* Modifications plus precis sur la table elle meme */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* --- Modification a les couleurs de font de la table --- */
+        .colone-un {
+            background: rgb(192,192,192);
+        }
+        .colone-deux {
+            background: rgb(220,220,220);
+        }
+        .ranger-un {
+            background: rgb(192,192,192);
+        }
+        /* --- Modification a les couleurs de font de la table --- */
+        /* Centre du texte */
+        .center {
+            text-align: center;
+        }
+        /* Mon self portarate */
+        .self-portrate {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: groove;
+            border-color: aqua;
+        }
+        /* arrenge le diplay des endroits que je veut visite */
+        .endroit-visite {
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .down {
+            position: absolute;
+            top: 15%;
+        }
+    </style>
     <body>
-        <h1>Une Belle Poem</h1>
-            <p>Messe de Midi
-            <br>Au chant du clocher
-            <br>Les ombres s’enterrent.
-            <br>
-            <br>Place de l’église
-            <br>Trop de monde
-            <br>À la terrasse des cafés.
-            <br>
-            <br>Brune, blonde ou rousse
-            <br>- Il les aime toutes
-            <br>Le soiffard.</p>
+        <div id="center down">
+            <h1>Une Belle Poem</h1>
+                <p style="font-style: Centeria Script, Times New Roman">Messe de Midi
+                <br>Au chant du clocher
+                <br>Les ombres s’enterrent.
+                <br>
+                <br>Place de l’église
+                <br>Trop de monde
+                <br>À la terrasse des cafés.
+                <br>
+                <br>Brune, blonde ou rousse
+                <br>- Il les aime toutes
+                <br>Le soiffard.</p>
+        </div>
     </body>
 </html>
