@@ -4,7 +4,12 @@
         <title>Projet dérivé de "Défi : un voyage parfait"</title>
         <meta charset="utf-8">
         
-        <style>
+        <style>            
+            /* Fait que le font est le meme partout */
+            #programe {
+                font-family: "Times New Roman", serif;
+            }
+            /* Modifie l'affichage du code de le grand titre*/
             #main {
                 position: fixed;
                 top: 0;
@@ -12,7 +17,10 @@
                 width: 80%;
                 background: aquamarine;
                 text-align: center;
+                color: black; 
+
             }
+            /* Mis en forme de la bar gauche */
             #bar-gauche {
                 background-color: bisque;
                 position: fixed;
@@ -25,6 +33,7 @@
                 font-size: medium;
                 font-weight: lighter;
             }
+            /* Mis en forme du grand titre en haut */
             .titre {
                 font-size: 150%;
                 font-weight: bold;
@@ -38,18 +47,49 @@
                 height: 10%;
                 margin: auto;
             }
+            /* Mis en forme des informations en coin d'ecran */
             #autres-informations {
                 position: fixed;
                 border: 5px solid black;
-                height: 50px;
-                width:25%;
+                height: 30%;
+                width:20%;
                 left: 0;
                 top: 70%;
             }
-            #endroit-visiste {
+            /* Mis en forme de la bibliographie sur moi */
+            #bibliographie {
+                position: absolute;
+                left: 19%;
+                top: 10%;
+            }
+            /* Mis en forme de la table de connaissences */
+            table, th, td {
+                border: 1px solid black;
+            }
+            /* Modifications plus precis sur la table elle meme */
+            table {
+                width: 80%;
+                border-collapse: collapse;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            /* --- Modification a les couleurs de font de la table --- */
+            .colone-un {
+                background: rgb(192,192,192);
+            }
+            .colone-deux {
+                background: rgb(220,220,220);
+            }
+            .ranger-un {
+                background: rgb(192,192,192);
+            }
+            /* --- Modification a les couleurs de font de la table --- */
+            /* Modification du text sur les endroits que je veux visite */
+            .endroit-visite {
                 position: fixed;
-                left: 25%;
-                up: -15%;
+                left: center;
+                top: -15%;
             }
         </style>
         
@@ -69,8 +109,7 @@
             </tr>
 <!--  Les liens a mes sites webs  -->
             <ul>
-                <li><a href="index.html">Un peu sur moi!</a>
-                </li>
+                <li><a href="index.html">Un peu sur moi!</a></li>
                 <li><a href="http://demdan13.github.io/poem.html">Poem</a></li>
                 <li><a href="http://DemDan13.github.io/voyage.html">Voyage</a></li>   
             </ul>
@@ -83,15 +122,15 @@
             <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
             <p>bonjoursb52@gmail.com</p>
         </div>
-<div id="endroit-visiste">        
-        <p>Jaimerais voirs des endroits comme ...</p>
-        <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/beach-in-hawaii.png" alt="Une plage a Hawai" width="251">
-        
-        <p>Et des animals comme...</p>
-        <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/komodo-dragon.png" alt="Un komodo dragon" width="251">
-        
-        <p>Et manger de la nouriture comme...</p>
-        <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/food/dumplings.png" alt="Des dumplings" width="251">
-</div>
+        <div id="endroit-visiste">        
+                <p>Jaimerais voirs des endroits comme ...</p>
+                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/beach-in-hawaii.png" alt="Une plage a Hawai" width="251">
+
+                <p>Et des animals comme...</p>
+                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/komodo-dragon.png" alt="Un komodo dragon" width="251">
+
+                <p>Et manger de la nouriture comme...</p>
+                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/food/dumplings.png" alt="Des dumplings" width="251">
+        </div>
     </body>
 </html>
