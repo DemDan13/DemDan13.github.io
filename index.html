@@ -2,7 +2,50 @@
 <html>
   
       <style>
-        h1 {
+        #main {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80%;
+            background: aquamarine;
+            text-align: center;
+        }
+        #bar-gauche {
+            background-color: bisque;
+            position: fixed;
+            top: 10%;
+            left: 0;
+            width: 20%;
+            height: 59%;
+            border: 5px solid black;
+            margin: 0px;
+            font-size: medium;
+            font-weight: lighter;
+        }
+        .titre {
+            font-size: 150%;
+            font-weight: bold;
+            background: aliceblue;
+            position: fixed;
+            text-align: center;
+            left: 0;
+            top: 0;
+            border: 5px solid black;
+            width:20%;
+            height: 10%;
+            margin: auto;
+            text-decoration-line: underline;
+        }
+        #autres-informations {
+            position: fixed;
+            border: 5px solid black;
+            height: 30%;
+            width:20%;
+            left: 0;
+            top: 70%;
+        }
+        
+<!--        h1 {
           font-family: "Lucida Handwriting";
           color: rgb(240, 48, 48);
         }
@@ -27,22 +70,54 @@
           width: 200px;
           position: absolute;
           margin-right: 10px;
-        }
+        } -->
     </style>
-  
-  
-  <head>
-    <h1>Le site web de DemDan13!</h1>
-      
-  </head>
-  
-  <body>
-    <div class="boit-gauche">
-    <h2><b>Traveaux</b></h2>
-    <a href="poem.html">Mon poem</a>
-    <br>
-    <a href="voyage.html">Le voyage de mes reves</a>
-    </div>
-  </body>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<!--  Le main titre au site web  -->
+        <div id="main">
+            <ul>
+                <h1>Le site web de DemDan13!</h1>
+            </ul>
+        </div>
+<!--  Le main titre au bars gauche  -->
+        <div id="bar-gauche">
+            <tr>
+<!--  Selection de class pour la modification en css pour tire: Mes traveaux.  -->
+                <th><p class="titre"><br>Mes traveaux:</p></th>
+            </tr>
+<!--  Les liens a mes sites webs  -->
+            <ul>
+            <!-- Lien au site web  -->
+                <div id="sur-moi">
+                    <li><a href="#sur-moi">Un peu sur moi!</a>
+                    </li>
+                </div>
+                <li><a href="http://demdan13.github.io/poem.html">Poem</a></li>
+                <li><a href="http://DemDan13.github.io/voyage.html">Voyage</a></li>   
+            </ul>
+        </div>
+<!--  Les infos de contacts extras  -->
+        <div id="autres-informations">
+            <p><b><u>Contacte moi a:</u></b></p>
+            <p><em><u>Telephone:</u></em></p>
+            <p>123-456-7890</p>
+            <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
+            <p>bonjoursb52@gmail.com</p>
+        </div>
+        <div id="bibliographie">
+            <h2>Un peu sur moi</h2>
+            <p>Je m'appele DemDan13 et je vais a l'ecole sur la lune! J'ai 1867 ans et je suis
+            dans la 13e annee. Mon sport preferer est le FootKick et aussi je suis tres bon en
+            le sport de natation d'espace. Mes passe temps preferer sont joue des jeux videos
+            comme le minecrafte et jouer dehors avec mes amis. Je suis un debutent a ecrire du 
+            code mais voici mes experiences:</p>
+          
+        </div>
+    </body>
   
 </html>
