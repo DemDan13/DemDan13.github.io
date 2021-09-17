@@ -2,6 +2,11 @@
 <html>
   
       <style>
+        /* Fait que le font est le meme partout */
+        #programe {
+            font-family: "Times New Roman", serif;
+        }
+        /* Modifie l'affichage du code de le grand titre*/
         #main {
             position: fixed;
             top: 0;
@@ -9,7 +14,10 @@
             width: 80%;
             background: aquamarine;
             text-align: center;
+            color: black; 
+
         }
+        /* Mis en forme de la bar gauche */
         #bar-gauche {
             background-color: bisque;
             position: fixed;
@@ -22,6 +30,7 @@
             font-size: medium;
             font-weight: lighter;
         }
+        /* Mis en forme du grand titre en haut */
         .titre {
             font-size: 150%;
             font-weight: bold;
@@ -34,8 +43,8 @@
             width:20%;
             height: 10%;
             margin: auto;
-            text-decoration-line: underline;
         }
+        /* Mis en forme des informations en coin d'ecran */
         #autres-informations {
             position: fixed;
             border: 5px solid black;
@@ -44,6 +53,35 @@
             left: 0;
             top: 70%;
         }
+        /* Mis en forme de la bibliographie sur moi */
+        #bibliographie {
+            position: absolute;
+            left: 19%;
+            top: 10%;
+        }
+        /* Mis en forme de la table de connaissences */
+        table, th, td {
+            border: 1px solid black;
+        }
+        /* Modifications plus precis sur la table elle meme */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* --- Modification a les couleurs de font de la table --- */
+        .colone-un {
+            background: rgb(192,192,192);
+        }
+        .colone-deux {
+            background: rgb(220,220,220);
+        }
+        .ranger-un {
+            background: rgb(192,192,192);
+        }
+        /* --- Modification a les couleurs de font de la table --- */
     </style>
 
     <head>
@@ -83,13 +121,40 @@
             <p>bonjoursb52@gmail.com</p>
         </div>
         <div id="bibliographie">
-            <h2>Un peu sur moi</h2>
-            <p>Je m'appele DemDan13 et je vais a l'ecole sur la lune! J'ai 1867 ans et je suis
-            dans la 13e annee. Mon sport preferer est le FootKick et aussi je suis tres bon en
-            le sport de natation d'espace. Mes passe temps preferer sont joue des jeux videos
-            comme le minecrafte et jouer dehors avec mes amis. Je suis un debutent a ecrire du 
-            code mais voici mes experiences:</p>
-          
+            <ul>
+                    <h2>Un peu sur moi</h2>
+                    <p>Je m'appele DemDan13 et je vais a l'ecole sur la lune! J'ai 1867 ans et je suis
+                    dans la 13e annee. Mon sport preferer est le Footkick et aussi je suis tres bon en
+                    le sport de natation d'espace. Mes passe temps preferer sont joue des jeux videos
+                    comme le minecrafte et jouer dehors avec mes amis. Je suis un debutent a ecrire du 
+                    code mais voici mes experiences:</p>
+            </ul>
+                <table>
+                    <tr class="ranger-un">
+                        <th>Langue</th>
+                        <th>Debutant</th>
+                        <th>Intermediaire</th>
+                        <th>Expert</th>
+                    </tr>
+                    <tr>
+                        <td class="colone-un">Html</td>
+                        <td class="colone-deux"></td>
+                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"></td>
+                    </tr>
+                    <tr>
+                        <td class="colone-un">CSS</td>
+                        <td class="colone-deux"></td>
+                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"></td>
+                    </tr>
+                    <tr>
+                        <td class="colone-un">JavaScript</td>
+                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"></td>
+                        <td class="colone-deux"></td>
+                    </tr>
+                </table>
         </div>
     </body>
 </html>
