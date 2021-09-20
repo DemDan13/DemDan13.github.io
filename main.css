@@ -1,0 +1,112 @@
+
+/* Fait que le font est le meme partout */
+#programe {
+    font-family: "Times New Roman", serif;
+}
+/* Modifie l'affichage du code de le grand titre*/
+#main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    background: aquamarine;
+    text-align: center;
+    color: black; 
+    
+}
+/* Mis en forme de la bar gauche */
+#bar-gauche {
+    background-color: bisque;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 20%;
+    height: 59%;
+    border: 5px solid black;
+    margin: 0px;
+    font-size: medium;
+    font-weight: lighter;
+}
+/* Mis en forme du grand titre en haut */
+.titre {
+    font-size: 150%;
+    font-weight: bold;
+    background: aliceblue;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    top: 0;
+    border: 5px solid black;
+    width:20%;
+    height: 10%;
+    margin: auto;
+}
+/* Mis en forme des informations en coin d'ecran */
+#autres-informations {
+    position: fixed;
+    border: 5px solid black;
+    height: 30%;
+    width:20%;
+    left: 0;
+    top: 70%;
+}
+/* Mis en forme de la bibliographie sur moi */
+#bibliographie {
+    position: absolute;
+    left: 19%;
+    top: 10%;
+}
+/* Mis en forme de la table de connaissences */
+table, th, td {
+    border: 1px solid black;
+}
+/* Modifications plus precis sur la table elle meme */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* --- Modification a les couleurs de font de la table --- */
+.colone-un {
+    background: rgb(192,192,192);
+}
+.colone-deux {
+    background: rgb(220,220,220);
+}
+.ranger-un {
+    background: rgb(192,192,192);
+}
+/* --- Modification a les couleurs de font de la table --- */
+/* Centre du texte */
+.center {
+    text-align: center;
+}
+/* Mon self portarate */
+.self-portrate {
+    text-align: center;
+    width: auto;
+    
+}
+/* arrenge le diplay des endroits que je veut visite */
+.endroit-visite {
+    position: fixed;
+    text-align: center;
+    left: 20%;
+    top: 10%;
+}
+/* Met tout les image a 100px */
+img {width: 100px;}
+/* le fait possible pour certaine image d'etre plus grandes */
+.alien {
+    border-color: black;
+    border-style: ridge;
+}
+.poem {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 10%;
+    background-image: image(E:/Daniel de Matos/cerclebleu.jpg);
+}

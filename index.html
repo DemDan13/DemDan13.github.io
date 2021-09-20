@@ -1,101 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-  
-      <style>
-        /* Fait que le font est le meme partout */
-        #programe {
-            font-family: "Times New Roman", serif;
-        }
-        /* Modifie l'affichage du code de le grand titre*/
-        #main {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 80%;
-            background: aquamarine;
-            text-align: center;
-            color: black; 
-
-        }
-        /* Mis en forme de la bar gauche */
-        #bar-gauche {
-            background-color: bisque;
-            position: fixed;
-            top: 10%;
-            left: 0;
-            width: 20%;
-            height: 59%;
-            border: 5px solid black;
-            margin: 0px;
-            font-size: medium;
-            font-weight: lighter;
-        }
-        /* Mis en forme du grand titre en haut */
-        .titre {
-            font-size: 150%;
-            font-weight: bold;
-            background: aliceblue;
-            position: fixed;
-            text-align: center;
-            left: 0;
-            top: 0;
-            border: 5px solid black;
-            width:20%;
-            height: 10%;
-            margin: auto;
-        }
-        /* Mis en forme des informations en coin d'ecran */
-        #autres-informations {
-            position: fixed;
-            border: 5px solid black;
-            height: 30%;
-            width:20%;
-            left: 0;
-            top: 70%;
-        }
-        /* Mis en forme de la bibliographie sur moi */
-        #bibliographie {
-            position: absolute;
-            left: 19%;
-            top: 10%;
-        }
-        /* Mis en forme de la table de connaissences */
-        table, th, td {
-            border: 1px solid black;
-        }
-        /* Modifications plus precis sur la table elle meme */
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        /* --- Modification a les couleurs de font de la table --- */
-        .colone-un {
-            background: rgb(192,192,192);
-        }
-        .colone-deux {
-            background: rgb(220,220,220);
-        }
-        .ranger-un {
-            background: rgb(192,192,192);
-        }
-        /* --- Modification a les couleurs de font de la table --- */
-        /* Centre du texte */
-        .center {
-            text-align: center;
-        }
-        /* Mon self portarate */
-        .self-portrate {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-style: groove;
-            border-color: aqua;
-        }
-    </style>
-
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="main.css">
@@ -116,10 +20,10 @@
                 </tr>
     <!--  Les liens a mes sites webs  -->
                 <ul>
-                    <li><a href="http://DemDan13.github.io/index.html">Un peu sur moi!</a>
+                    <li><a href="index.html">Un peu sur moi!</a>
                     </li>
-                    <li><a href="http://demdan13.github.io/poem.html">Poem</a></li>
-                    <li><a href="http://DemDan13.github.io/voyage.html">Voyage</a></li>   
+                    <li><a href="poem.html">Poem</a></li>
+                    <li><a href="voyage.html">Voyage</a></li>   
                 </ul>
             </div>
     <!--  Les infos de contacts extras  -->
@@ -128,7 +32,7 @@
                 <p><em><u>Telephone:</u></em></p>
                 <p>123-456-7890</p>
                 <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
-                <p>bonjoursb52@gmail.com</p>
+                <p>bonjoursb52@ gmail.com</p>
             </div>
             <div id="bibliographie">
                 <ul>
@@ -149,30 +53,32 @@
                     <tr>
                         <td class="colone-un">Html</td>
                         <td class="colone-deux"></td>
-                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"><img src="checkmark_vert.png"/></td>
                         <td class="colone-deux"></td>
                     </tr>
                     <tr>
                         <td class="colone-un">CSS</td>
                         <td class="colone-deux"></td>
-                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"><img src="checkmark_vert.png"/></td>
                         <td class="colone-deux"></td>
                     </tr>
                     <tr>
                         <td class="colone-un">JavaScript</td>
-                        <td class="colone-deux"><img src="E:/Daniel de Matos/checkmark_vert.png"/></td>
+                        <td class="colone-deux"><img src="checkmark_vert.png"/></td>
                         <td class="colone-deux"></td>
                         <td class="colone-deux"></td>
                     </tr>
-<!-- L'image de moi :> -->
-                    <div id="center">
-                        <h3><strong><em>Voici a quoi j'ai l'aire:</em></strong></h3>
-                    </div>
-                    <div id="self-portrate">
-                        <br>
-                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F11191140-Cool-Alien-Angel&psig=AOvVaw2hlCX5Gduurk_LHEf0HNNO&ust=1631982909315000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMiHgaO4hvMCFQAAAAAdAAAAABAD" alt="Alien avec ails de ange qui fait le symbole de peace" width="400">
-                    </div>
                 </table>
+                <div id="center">
+                    <ul>
+                        <h3><strong><em>Voici a quoi j'ai l'aire:</em></strong></h3>
+    <!-- L'image de moi :> -->
+                        <div id="self-portrate">
+                            <br>
+                            <img src="alien%20image.jpg"/ alt="Alien avec ails de ange qui fait le symbole de peace" hight="1000" id="alien">
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </body>
