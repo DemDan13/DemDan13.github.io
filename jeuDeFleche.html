@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+<!--  Le main titre au site web  -->
+        <div id="programe">
+            <div id="main">
+                <ul>
+                    <h1>Le site web de DemDan13!</h1>
+                </ul>
+            </div>
+    <!--  Le main titre au bars gauche  -->
+            <div id="bar-gauche">
+                <tr>
+    <!--  Selection de class pour la modification en css pour tire: Mes traveaux.  -->
+                    <th><p class="titre"><br>Mes traveaux:</p></th>
+                </tr>
+    <!--  Les liens a mes sites webs  -->
+                <ul>
+                    <li><a href="index.html">Un peu sur moi!</a>
+                    </li>
+                    <li><a href="poem.html">Poem</a></li>
+                    <li><a href="voyage.html">Voyage</a></li>  
+                    <li><a href="leNom.html">Demande ton nom</a></li>
+                    <li><a herf="programeDeCaisse.html">Programme de Caisse</a></li>
+                </ul>
+            </div>
+    <!--  Les infos de contacts extras  -->
+            <div id="autres-informations">
+                <p><b><u>Contacte moi a:</u></b></p>
+                <p><em><u>Telephone:</u></em></p>
+                <p>123-456-7890</p>
+                <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
+                <p>bonjoursb52@ gmail.com</p>
+            </div>
+          <script>
+            // cree par Daniel de Matos 11e
+            // imprime une fleche qui point vers le haut
+            function afficheHaut() {
+              document.body("Haut: ^");
+              document.body("      l");
+              document.body("      l");
+              document.body("      l");
+              document.body("");
+            }
+            // imprime une fleche qui point vers le bas
+            function afficheBas() {
+              document.body("Bas: l");
+              document.body("     l");
+              document.body("     l");
+              document.body("     V");
+              document.body("");
+            }
+            // imprime une fleche qui point vers la droite
+            function afficheDroite() {
+              document.body("Droite: ----->");
+              document.body("");
+            }
+            //imprime une fleche qui point vers la gauche
+            function afficheGauche() {
+              document.body("Gauche: <-----");
+              document.body("");
+            }
+            // variable qui fait que le while loop fonctionne
+            var jouer = true;
+            // message qui affiche bonjours
+            alert("Bienvenue au jeux de labirinth!");
+            // boucle while qui demnade les directions possibles dans le jeux
+            while (jouer == true) {
+              // demande a l'utilisateur quelle direction il veut aller
+              var direction = prompt("Quel direction voulez vous allez? haut (h), bas (b), droite (d), gauche (g)")
+              // si la direction est (h/H) affiche fleche vers le haut
+              if (direction === "h" || direction === "H") {
+                afficheHaut();
+                // si la direction est (b/B) affiche fleche vers le bas
+              } else if (direction === "b" || direction === "B") {
+                afficheBas();
+                // si la direction est (d/D) affiche fleche vers la droite
+              } else if (direction === "d" || direction === "D") {
+                afficheDroite()
+                // si la direction est (g/G) affiche fleche vers la gauche
+              } else if (direction === "g" || direction === "G") {
+                afficheGauche()
+                // si la direction est ni des options possibles, indique que l'option n'est pas viable
+              } else {
+                alert("Ce n'est pas une reponse possible!")
+              }
+              // demande si la personne veut continuer
+              var cont = confirm("Voulez-vous continuer?")
+              // si oui, recemence la boucle
+              if (cont === true) {
+                jouer = true;
+              // sinon, termine la boucle
+              } else {
+                jouer = false;
+              }
+            }
+            // message qui dit merci de jouer
+            alert("Merci pour jouer!")
+          </script>
+    </body>
+</html>
