@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+      <!--  Le main titre au site web  -->
+        <div id="programe">
+            <div id="main">
+                <ul>
+                    <h1>Le site web de DemDan13!</h1>
+                </ul>
+            </div>
+      <!--  Le main titre au bars gauche  -->
+              <div id="bar-gauche">
+                  <tr>
+      <!--  Selection de class pour la modification en css pour tire: Mes traveaux.  -->
+                      <th><p class="titre"><br>Mes traveaux:</p></th>
+                  </tr>
+      <!--  Les liens a mes sites webs  -->
+                  <ul>
+                      <li><a href="index.html">Un peu sur moi!</a>
+                      </li>
+                      <li><a href="poem.html">Poem</a></li>
+                      <li><a href="voyage.html">Voyage</a></li>  
+                      <li><a href="leNom.html">Demande ton nom</li>
+                  </ul>
+              </div>
+      <!--  Les infos de contacts extras  -->
+              <div id="autres-informations">
+                  <p><b><u>Contacte moi a:</u></b></p>
+                  <p><em><u>Telephone:</u></em></p>
+                  <p>123-456-7890</p>
+                  <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
+                  <p>bonjoursb52@ gmail.com</p>
+              </div>
+      <script>
+        var prenom = prompt("C'est quoi ton prenom: ");
+        var millieu = prompt("C'est quoi ton millieu nom: ");
+        var dernier = prompt("C'est quoi ton dernier nom: ");
+
+        var nomComplet = prenom.slice(0) + " " + millieu.slice(0) + " " + dernier.slice(0);
+        var initiales = prenom.slice(0, 1) + "." + millieu.slice(0, 1) + "." + dernier.slice(0, 1);
+        var nomUtilisateur = prenom.slice(0, 1) + millieu.slice(0, 1) + dernier.slice(0);
+
+        document.write("Votre nom complet est: " + nomComplet);
+        document.write("Vous initiales sont: " + initiales);
+        document.write("Votre nom d'utilisateur est: " + nomUtilisateur.toLowerCase())
+      </script>
+  </body>
+</html>
