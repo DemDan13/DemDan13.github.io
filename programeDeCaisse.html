@@ -1,79 +1,157 @@
-<!DOCTYPE HTML>
+  <!-----------------------------------------------------------------
+-------------------------
+Programe qui demande des items dont la personne veut acheter et
+calcule le prix de ces items
+avec le tax de l'endroit ou la personne vit (soit quebec ou
+ontario)
+Cree par Daniel de Matos
+ICS3U
+2021
+-------------------------------------------------------------------
+------------------------>
+<!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8" />
+    <title>Programe d'achat et de payement</title>
+    <script src="script.js"></script>
   </head>
   <body>
-    <!--  Le main titre au site web  -->
-          <div id="programe">
-              <div id="main">
-                  <ul>
-                      <h1>Le site web de DemDan13!</h1>
-                  </ul>
-              </div>
-      <!--  Le main titre au bars gauche  -->
-              <div id="bar-gauche">
-                  <tr>
-      <!--  Selection de class pour la modification en css pour tire: Mes traveaux.  -->
-                      <th><p class="titre"><br>Mes traveaux:</p></th>
-                  </tr>
-      <!--  Les liens a mes sites webs  -->
-                  <ul>
-                      <li><a href="index.html">Un peu sur moi!</a>
-                      </li>
-                      <li><a href="poem.html">Poem</a></li>
-                      <li><a href="voyage.html">Voyage</a></li>  
-                      <li><a href="leNom.html">Demande ton nom</a></li>
-                      <li><a> herf="programeDeCaisse.html">Programme de Caisse</a></li>
-                  </ul>
-              </div>
-      <!--  Les infos de contacts extras  -->
-              <div id="autres-informations">
-                  <p><b><u>Contacte moi a:</u></b></p>
-                  <p><em><u>Telephone:</u></em></p>
-                  <p>123-456-7890</p>
-                  <p><em><u><a href="https://mail.google.com/mail/u/0/#inbox">Email:</a></u></em></p>
-                  <p>bonjoursb52@ gmail.com</p>
-              </div>
-    </div>
-    <script>
-      let verite = true;
-      let num = 0;
-      let somme = 0;
-      let nombreEntrer = 0;
-      let foix = "";
-      let table = [];
-      let min, max;
+    <p>Bienvenue a l'entrepirse des Fruits! Nous vendons seulement
+les meilleurs fruits de pliens de sortes! Nos specialite les plus
+acheter sont juste endessous!</p>
+    <!-- form qui contient toutes les informations -->
+    <form>
+        <!-- demande pour les taxes -->
+        <label for="radProvince"><em><strong>Vit tu en Quebec ou
+Ontario (pour les taxes):</strong></em></label><br>
+        <!-- reponse 1: Quebec -->
+        <input id="radProvince" name="province" type="radio"
+value="Quebec" />
+        <label for="radProvince">Quebec</label> <br>
+        <!-- reponse 2: Ontario -->
+        <input id="radProvince" name="province" type="radio"
+value="Ontario" />
 
-      while (verite == true) {
-        nombreEntrer = nombreEntrer + 1;
-        num = parseInt(prompt("Quel est votre nombre"));
-        somme = somme + num;
-        foix ++;
-        let cont = confirm("Voulez vous continuer?");
-        if (cont == true) {
-          verite = true;
+          <label for="radProvince">Ontario</label> <br>
+        <!-- liste d'items disponsibles -->
+        <label for="chkItemsDisponsibles"><em><strong>Les items
+disponsibles:</strong></em></label><br>
+      <ol>
+        <!-- option 1: Des bananes -->
+        <input type="checkbox" id="Bananes" name="items"
+value="2.5"  />
+        <li><label for="item1">Bananes 2.50$</label></li>  <br>
+        <img
+src="https://world.openfoodfacts.org/images/products/542/500/361/14
+21/front_en.7.400.jpg" width = "100"> <br>
+        <!-- option 1: Des pommes -->
+        <input type="checkbox" id="Pommes" name="items"
+value="3.12" />
+        <li><label for="item2">Pommes 3.12$</label></li>  <br>
+        <img
+src="https://www.jessicagavin.com/wp-content/uploads/2020/10/types-
+of-apples-1-600x900.jpg" width="100"> <br>
+/>
+<!-- option 1: Des Oranges -->
+<input type="checkbox" id="Oranges" name="items" value="4"
+<li><label for="item3">Oranges 4.00$</label></li>  <br>
+        <img
+src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/h
+alf-of-orange-on-the-heap-of-oranges-royalty-free-image-1598525395.
+jpg?resize=980:*" width="100"> <br>
+        <!-- option 1: Des Bleuets -->
+        <input type="checkbox" id="Bleuets" name="items"
+value="5.68" />
+        <li><label for="item4">Bleuets 5.68$</label></li>  <br>
+        <img
+src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/b
+
+  lueberries-1527711083.jpg?crop=1.00xw:0.753xh;0,0.0816xh&resize=980
+:*" width="100"> <br>
+        <!-- option 1: Des Fraises -->
+        <input type="checkbox" id="Fraises" name="items"
+value="7.15" />
+        <li><label for="item5">Fraises 7.15$</label></li>  <br>
+        <img
+src="https://www.jaimefruitsetlegumes.ca/wp-content/uploads/2019/08
+/fraises-700x700.jpg" width="100"> <br>
+        <!-- bouton pour soumettre les achats -->
+      </ol>
+        <input type="button" id="btnSoumet"
+onclick="soummetAchats()" value="Soumettre les achats"/>
+        <!-- Création d'une section pour l'affichage des résultats
+-->
+  <div id="divAffiche"></div>
+</form>
+<script>
+  function soummetAchats() {
+    //Chercher la section d’affichage div dans le formulaire
+    var affiche = document.getElementById("divAffiche");
+    //Chercher les données dans le formulaire
+    var laProvince = document.getElementsByName("province");
+    var lesItems = document.getElementsByName("items");
+    //Pour déterminer lequel des radio buttons est coché
+    var radiosProvince =
+document.getElementsByName("province");
+        //Variable pour stocker la classe preferer
+        var prov = "";
+        for (var i = 0; i < laProvince.length; i++) {
+          if (laProvince[i].checked) {
+              prov = laProvince[i].value;
+} }
+
+          //Pour déterminer lesquels des checkbox sont cochés
+        var checkItems = document.getElementsByName("items");
+        var itemsChoisis = [];
+        for (var i=0; i < checkItems.length; i++) {
+          if (checkItems[i].checked) {
+            itemsChoisis += checkItems[i].id + ", ";
+} }
+        // pour voir les items choisis
+        let données = [
+          [itemsChoisis]
+]
+        // pour voirs les items et leur prix
+        var array = [{Name: lesItems}];
+        var biggestNumber = 0;
+        for (var i = 0; i < array.length; i++){
+            var item = array[i]
+          if(biggestNumber < item.Price) {
+            biggestNumber = biggestNumber + item;
+          }
+}
+        // decide la valeur de tout les items ensembles
+        let valTot = 0;
+        for (var i=0; i < checkItems.length; i++) {
+          if (checkItems[i].checked) {
+            valTot += parseFloat(checkItems[i].value);
+} }
+        //Chercher les données select dans le formulaire
+        var radiosProvince =
+document.getElementsByName("province");
+        //Variable pour stocker la province choisie
+        var province = "";
+        for (var i = 0; i < radiosProvince.length; i++) {
+
+            if (radiosProvince[i].checked) {
+              province = radiosProvince[i].value;
+} }
+        // calcule les taxes
+        if (province == "Quebec") {
+          province = 1.15
         } else {
-          verite = false
-        }
-        table.push(num)
+          province = 1.13
+}
+        // additioner la valeur total avec le tax
+        valTot = parseFloat(province) * valTot
+        //Construire le message à afficher
+        var message = "<br><br>Recu <br><br> " + données + " <br>
+------------------------------ <br> Sous-total: " +
+Math.round(valTot * 100) / 100 + " <br><br>";
+        //Afficher le message sur la page web
+        affiche.innerHTML = message;
       }
-      min= table[0]
-      max= table[0]
-      document.body(table)
-      for (var i = 0; i <= table.length; i++) {
-        if (table[i] < min) {
-          min = table[i];
-        } else if (table[i] > max) {
-          max = table[i]
-        }
-      }
-
-      document.body("Max: " + max)
-      document.body("Min: " + min)
-      document.body("la somme est: " + somme)
-      document.body("les nombres d'entrer est: " + nombreEntrer)
-      document.body("la moyenne est: " + (somme / nombreEntrer))
     </script>
-  </body
+  </body>
+</html>
